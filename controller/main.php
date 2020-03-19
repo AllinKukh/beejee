@@ -12,12 +12,16 @@
 		$data['task'] = get_task($id);
 	}
 	
-	if( isset($_POST['action']) ){	// Нажата кнопка отправить
+	if( isset($_POST['action']) ){			// Нажата кнопка отправить
 		if ( isset($_POST['id']) && $_POST['id'] >0 && isset($_SESSION['admin']) ){
 			edit_task();
 		}else{
-			add_task();
+			if ( !isset($_POST['id']) ){
+				add_task();
+			}
 		}
+		
+		
 	}
 	
 	if( $request[0]== 'orderby' && isset($request[1]) ){
