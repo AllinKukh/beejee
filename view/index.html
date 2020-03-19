@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name='Title' content='{TITLE}'>
+	<meta name='Description' content='{DESCRIPTIONS}'>
+	<meta name='KeyWords' content='{KEYWORDS}'>
+	<meta name='robots' content='index,all'>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="/view/css/main.css" media="all" />  
+
+	<title>{TITLE}</title>
+</head>
+
+<body id="body">
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="topMenu">
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbar1">
+					<ul class="navbar-nav mr-auto">
+					
+						<li class="nav-item active">
+							<a class="nav-link btn-outline-info" href="/">Главная <span class="sr-only">(current)</span></a>
+						</li>
+						
+						<li class="dropdown nav-item">						
+							<a class="dropdown-toggle nav-link btn-outline-info" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сортировка</a>
+
+							<div class="dropdown-menu navbar-dark bg-dark" aria-labelledby="dropdownMenuLink">
+								<a class="nav-link btn-outline-info" href="/orderby/name">Имя&nbsp;по&nbsp;возрастанию</a>
+								<a class="nav-link btn-outline-info" href="/orderby/name_desc">Имя&nbsp;по&nbsp;убыванию</a>
+								<a class="nav-link btn-outline-info" href="/orderby/email">Email&nbsp;по&nbsp;возрастанию</a>
+								<a class="nav-link btn-outline-info" href="/orderby/email_desc">Email&nbsp;по&nbsp;убыванию</a>
+								<a class="nav-link btn-outline-info" href="/orderby/status">Статус&nbsp;по&nbsp;возрастанию</a>
+								<a class="nav-link btn-outline-info" href="/orderby/status_desc">Статус&nbsp;по&nbsp;убыванию</a>								
+							</div>						
+						</li>
+						
+					</ul>
+					
+
+					<div class="form-inline my-2 my-lg-0">
+						{USER_MENU}
+					</div >
+				</div>
+			</nav>
+		</div>
+		
+		
+		<div class="row " id="header">
+			<div class="col-sm-9 col-md-10">{SLOGAN} <h1>{SITE_NAME}</h1></div>
+		</div>
+		
+		
+		{CONTENT}
+
+
+		<div id="footer">
+			<hr>
+			© 2020, Oleg Kukharenko, oksoft@ya.ru
+		</div>
+	</div>
+	
+	<div id="modal">
+		<section>
+			<header>
+				<span id="modalTitle">Внимание!</span>&nbsp;
+			</header>
+			<article>
+				<span id="modalText">Это модальное окно.</span>&nbsp;
+			</article>
+			<footer>
+			<a class="btn btn-outline-info" onclick="modalOk(1);" > &nbsp; &nbsp; <span id="modalBtn">OK</span> &nbsp; &nbsp; </a>
+			</footer>
+		</section>
+	</div>	
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="/view/js/site.js"></script>
+</body>
+
+</html>
