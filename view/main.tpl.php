@@ -1,5 +1,3 @@
-<?php ob_start(); ?>
-
 <section class="login-block">
 	<div class="container">
 		<div class="row">
@@ -67,6 +65,3 @@
 </table>
 <br>
 <?= $data['paginator'] ?>
-
-
-<? $content .= ob_get_clean(); ?>

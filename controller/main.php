@@ -16,7 +16,8 @@
 		if ( isset($_POST['id']) && $_POST['id'] >0 && isset($_SESSION['admin']) ){
 			edit_task();
 		}else{
-			if ( !isset($_POST['id']) ){
+			if ( isset($_POST['id']) && $_POST['id'] > 1 ){
+			}else{
 				add_task();
 			}
 		}
@@ -43,5 +44,7 @@
 	$data['query'] = get_page();
 	$data['paginator']= get_paginator();
 
+	ob_start(); // перенаправление вывода перед вызовом шаблона
 	include_once("view/$controller.tpl.php");				// Соответствующий шаблон
+	$content .= ob_get_clean(); // забираем итог отработки шаблона
 ?> 
